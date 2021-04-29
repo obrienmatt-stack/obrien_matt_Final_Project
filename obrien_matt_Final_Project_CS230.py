@@ -37,7 +37,7 @@ def read_data(filename):
 
 def load_data():
     filters = ['manufacturer', 'type', 'price', 'year', 'condition', 'drive', 'paint_color', 'lat', 'long']
-    car_data = pd.read_csv('PycharmProjects/used_cars.csv')
+    car_data = pd.read_csv('used_cars.csv')
     car_data = car_data.filter(filters)
     car_data = car_data.dropna()
 
@@ -105,7 +105,7 @@ def show_map(data, manufacturers, price):
 
 
 def main():
-    data = read_data('PycharmProjects/used_cars.csv')
+    data = read_data('used_cars.csv')
 # Title to page on Streamlit
     st.title('An Analysis of Used Cars on Craigslist')
     st.subheader("Presented by Matty O'Brien")
